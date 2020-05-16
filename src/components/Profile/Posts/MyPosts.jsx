@@ -1,7 +1,8 @@
 import React from 'react'
-import s from'./MyPosts.module.css';
+import s from './MyPosts.module.css';
+import Post from './PostModel/Post';
 
-const MyPosts = () => {
+const MyPosts = (props) => {
     return (
 
           <div className={s.posts}>
@@ -10,14 +11,8 @@ const MyPosts = () => {
             <textarea></textarea>
             <button>Add post</button>
           </div>
-          <div className={s.item}>
-            New post
-          
-           <div className={s.item}>
-            post 1
-          </div>
-            <div className={s.item}>post2</div>
-            </div>
+          < Post message='Hi, people' count=' 15' />
+          < Post message='First post' count=' 10'/>
           </div>
 
     );
